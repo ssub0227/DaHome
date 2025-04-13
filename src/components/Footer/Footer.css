@@ -1,0 +1,11 @@
+/* Footer.css */
+
+Footer{
+  background-color: var(--light-green);
+  color: var(--brown);
+  height:5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
