@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Upload.css'
 
 const Upload = () => {
@@ -6,7 +7,7 @@ const Upload = () => {
     <>
       <input type='text' placeholder='운동방 이름을 입력하세요.'></input>
       <input type='text' placeholder='유튜르 링크를 입력하세요.'></input>
-      <button type='submit'></button>
+      <Link to='/Share'><button type='submit'></button></Link>
       <div>
         <h2>미리보기</h2>
         <div>
