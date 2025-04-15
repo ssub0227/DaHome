@@ -8,15 +8,19 @@
   --white:#fff;
 }
 
+main>div{
+  width: 100%;
+}
+
 .title{
   font-size: 4vh;
 }
 
-.title_impact{
+.titleImpact{
   font-size: 5vh;
 }
 
-.sub_title{
+.subTitle{
   margin-top: 1.5vh;
   font-size:2vh;
 }

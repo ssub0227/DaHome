@@ -9,7 +9,7 @@ const Upload = () => {
       <h2 className='title'>다홈 프로젝트 생성</h2>
       <input type='text' placeholder='프로젝트 이름을 입력하세요.' name='pj_title_input' id='pj_title_input'></input>
       <input type='text' placeholder='유튜르 링크를 입력하세요.' name='vd_link_input' id='vd_link_input'></input>
-      <Button link={'/Share'} text={'운동 프로젝트 생성'}></Button>
+      <Button link={'/share'} text={'운동 프로젝트 생성'}></Button>
       <div className='preview'>
         <h2 className='title'>동영상 미리보기</h2>
         <div className='privewVideo'>

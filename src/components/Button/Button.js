@@ -4,6 +4,7 @@ import './Button.css'
 
 
 const Button = ({link, text}) => {
+
   return (
     <Link to={link} className='btn'>{text}</Link>
   )

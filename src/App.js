@@ -7,6 +7,7 @@ import Footer from  './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Play from './pages/Play/Play';
 import Upload from './pages/Upload/Upload';
+import Share from './pages/Share/Share';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/play" element={<Play />} />
           <Route path="/upload" element={<Upload />} />     
+          <Route path="/share" element={<Share />} />     
         </Routes>
       </main>
       <Footer/>

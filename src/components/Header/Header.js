@@ -7,7 +7,8 @@ const Header = () =>{
     <header>
       <h1>
         <Link to='/'>
-          <i className='fa-solid fa-house-user'></i>다홈
+          {/* <i className='fa-solid fa-house-user'></i> */}
+          다홈
         </Link>
       </h1>
     </header>
