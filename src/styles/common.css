@@ -5,4 +5,26 @@
   --yellow:#ffe1a8;
   --light-yellow:#fff5e2;
   --light-green:#c9cba3;
+  --white:#fff;
+}
+
+.title{
+  font-size: 4vh;
+}
+
+.title_impact{
+  font-size: 5vh;
+}
+
+.sub_title{
+  margin-top: 1.5vh;
+  font-size:2vh;
+}
+
+.displayNo{
+  display: none;
+}
+
+.displayYes{
+  display: block;
 }

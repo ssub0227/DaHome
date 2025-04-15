@@ -6,7 +6,7 @@
 }
 
 main{
-  padding:10vh 3vh 0 3vh;
+  padding:10vh 3vh 5ch 3vh;
   background-color: var(--light-yellow);
   display: flex;
   justify-content: center;
