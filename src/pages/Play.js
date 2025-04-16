@@ -1,12 +1,11 @@
 import React from 'react';
-import './Play.css'
 
 const Play = () => {
   return (
-    <>
+    <div>
       <h2>방 이름 제목</h2>
       <div>
-        <iframe></iframe>
+        {/* <iframe></iframe> */}
       </div>
       <ul>
         <li>
@@ -17,7 +16,7 @@ const Play = () => {
         </li>
       </ul>
       <button>오늘 운동 완료</button>
-    </>
+    </div>
   )
 }
 export default Play;

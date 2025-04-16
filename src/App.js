@@ -1,17 +1,21 @@
 import React from 'react';
-import './styles/App.css';
 
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Footer from  './components/Footer/Footer';
-import Home from './pages/Home/Home';
-import Play from './pages/Play/Play';
-import Upload from './pages/Upload/Upload';
-import Share from './pages/Share/Share';
+import Header from 'components/Header';
+import Footer from  'components/Footer';
+import Home from 'pages/Home';
+import Play from 'pages/Play';
+import Upload from 'pages/Upload';
+import Share from 'pages/Share';
+import GlobalStyles from 'styles/reset';
+import CommonCSS from 'styles/common';
+
 
 const App = () => {
   return (
     <div className='App'>
+      <GlobalStyles /> 
+      <CommonCSS />
       <Header />
       <main>
         <Routes>
