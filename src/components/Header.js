@@ -12,6 +12,7 @@ let HeaderBox = styled.header`
   justify-content: center;
   position: fixed;
   width: 100%;
+  box-shadow: 1px 1px 10px 1px var(--light-green-shadow);
 `
 
 let HeaderText = styled.h1`

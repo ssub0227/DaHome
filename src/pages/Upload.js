@@ -8,7 +8,6 @@ let Input = styled.input`
   margin-bottom: 2vh;
   width: 100%;
   border-radius: 8px;
-  color: var(--brown);
 
   #pj_title_input{
     margin-top:0;
@@ -47,13 +46,12 @@ let PreviewText = styled.p`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--brown);
   }
 `
 
 const Upload = () => {
   return (
-    <div className='upload'>
+    <div>
       <TitleText text={'다홈 프로젝트 생성'}></TitleText>
       <Input type='text' placeholder='프로젝트 이름을 입력하세요.' name='pj_title_input' id='pj_title_input'></Input>
       <Input type='text' placeholder='유튜르 링크를 입력하세요.' name='vd_link_input' id='vd_link_input'></Input>

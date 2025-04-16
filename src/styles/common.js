@@ -10,6 +10,7 @@ const CommonCSS = createGlobalStyle`
     --light-yellow:#fff5e2;
     --light-green:#c9cba3;
     --white:#fff;
+    --light-green-shadow:#677e6b;
   }
 
   .App{
@@ -18,16 +19,22 @@ const CommonCSS = createGlobalStyle`
   }
 
   main{
-    padding:10vh 3vh 5ch 3vh;
+    padding-top:10vh;
     background-color: var(--light-yellow);
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 95vh;
+    height:100%;
   }
 
   main>div{
     width: 100%;
+    max-width:768px;
+    margin:5% 0;
+    padding:5%;
+    background-color:var(--light-green);
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px 1px var(--light-green-shadow);
   }
 
   .titleImpact{
