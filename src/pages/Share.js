@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'components/Button';
+import TitleText from 'components/TitleText';
+import SubTitleText from 'components/SubTitleText';
 
 let BtnList = styled.ul`
   display: flex;
@@ -15,9 +17,8 @@ let BtnList = styled.ul`
 const Share = () => {
   return (
     <div className='share'>
-      <div className='title'>운동 프로젝트 완성!</div>
-      <h2 className='title'>프로젝트명</h2>
-      <p className='subTitle'>우리 다 같이 운동하는 거야...!</p>
+      <TitleText text={'프로젝트 완성!'}></TitleText>
+      <SubTitleText text={'우리 다 같이 운동하는 거야...!'}></SubTitleText>
       <BtnList className='btnList'>
         <li>
           <Button text={'공유하기'}></Button>

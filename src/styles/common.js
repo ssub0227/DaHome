@@ -30,17 +30,8 @@ const CommonCSS = createGlobalStyle`
     width: 100%;
   }
 
-  .title{
-    font-size: 4vh;
-  }
-
   .titleImpact{
     font-size: 5vh;
-  }
-
-  .subTitle{
-    margin-top: 1.5vh;
-    font-size:2vh;
   }
 
   .displayNo{

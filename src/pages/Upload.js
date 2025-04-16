@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'components/Button';
+import TitleText from 'components/TitleText';
 
 let Input = styled.input`
   padding: 1.5vh;
-  margin-top: 1.5vh;
+  margin-bottom: 2vh;
   width: 100%;
   border-radius: 8px;
   color: var(--brown);
@@ -14,10 +15,6 @@ let Input = styled.input`
   }
 `
 
-let Title = styled.h2`
-  margin:5% 0;
-`
-
 let PrivewVideo = styled.div`
   text-align: center;
   position: relative;
@@ -25,6 +22,7 @@ let PrivewVideo = styled.div`
   width: 100%;
   height: 0;
   border-radius: 8px;
+  border:2px dashed var(--brown);
   overflow: hidden;
 
   iframe{
@@ -49,18 +47,19 @@ let PreviewText = styled.p`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: var(--brown);
   }
 `
 
 const Upload = () => {
   return (
     <div className='upload'>
-      <Title>다홈 프로젝트 생성</Title>
+      <TitleText text={'다홈 프로젝트 생성'}></TitleText>
       <Input type='text' placeholder='프로젝트 이름을 입력하세요.' name='pj_title_input' id='pj_title_input'></Input>
       <Input type='text' placeholder='유튜르 링크를 입력하세요.' name='vd_link_input' id='vd_link_input'></Input>
-      <Button link={'/share'} text={'운동 프로젝트 생성'}></Button>
+      <Button text={'확인'}></Button>
       <div className='preview'>
-        <Title>동영상 미리보기</Title>
+        <TitleText text={'동영상 미리보기'}></TitleText>
         <PrivewVideo>
           <div className='videoBox'>
             <iframe src="https://www.youtube.com/embed/6ZUIwj3FgUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -69,6 +68,7 @@ const Upload = () => {
           <PreviewText><span>에러가 발생하였습니다.</span></PreviewText>
         </PrivewVideo>
       </div>
+      <Button link={'/share'} text={'운동 프로젝트 생성'}></Button>
     </div>
   )
 }

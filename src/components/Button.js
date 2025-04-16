@@ -13,7 +13,7 @@ let Btn = styled(Link)`
   background-color: var(--brown);
   color: white;
   padding: 1.5vh;
-  margin-top: 1.5vh;
+  margin-top: 2vh;
   display: inline-block;
   border-radius: 8px;
   width: 100%;
