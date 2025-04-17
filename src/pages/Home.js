@@ -8,7 +8,7 @@ let HomeBox = styled.div`
   text-align: center;
   
   > div{
-    margin:5% 0;
+    margin-bottom:5%;
   }
 `
 

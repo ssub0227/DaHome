@@ -13,6 +13,14 @@ let HeaderBox = styled.header`
   position: fixed;
   width: 100%;
   box-shadow: 1px 1px 10px 1px var(--light-green-shadow);
+
+  ul{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width: 768px;
+    width: 100%;
+  }
 `
 
 let HeaderText = styled.h1`
@@ -30,12 +38,19 @@ let HeaderText = styled.h1`
 const Header = () =>{
   return (
     <HeaderBox>
-      <HeaderText>
-        <Link to='/'>
-          {/* <HeaderIcon className='fa-solid fa-house-user'></HeaderIcon> */}
-          다홈
-        </Link>
-      </HeaderText>
+      <ul>
+        <li>
+          <HeaderText>
+            <Link to='/'>
+              {/* <HeaderIcon className='fa-solid fa-house-user'></HeaderIcon> */}
+              다홈
+            </Link>
+          </HeaderText>
+        </li>
+        <li>
+          <Link to={'/login'}>로그인</Link>
+        </li>
+      </ul>
     </HeaderBox>
   );
 }

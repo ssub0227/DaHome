@@ -7,8 +7,10 @@ import Home from 'pages/Home';
 import Play from 'pages/Play';
 import Upload from 'pages/Upload';
 import Share from 'pages/Share';
+import Login from 'pages/Login';
 import GlobalStyles from 'styles/reset';
 import CommonCSS from 'styles/common';
+import MyPage from 'pages/MyPage';
 
 
 const App = () => {
@@ -22,7 +24,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/play" element={<Play />} />
           <Route path="/upload" element={<Upload />} />     
-          <Route path="/share" element={<Share />} />     
+          <Route path="/share" element={<Share />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/mypage" element={<MyPage />} /> 
         </Routes>
       </main>
       <Footer/>
