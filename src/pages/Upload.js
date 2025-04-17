@@ -52,12 +52,12 @@ let PreviewText = styled.p`
 const Upload = () => {
   return (
     <div>
-      <TitleText text={'다홈 프로젝트 생성'}></TitleText>
+      <TitleText text={'다홈 프로젝트 생성'} marginBottom={5}></TitleText>
       <Input type='text' placeholder='프로젝트 이름을 입력하세요.' name='pj_title_input' id='pj_title_input'></Input>
       <Input type='text' placeholder='유튜르 링크를 입력하세요.' name='vd_link_input' id='vd_link_input'></Input>
       <Button text={'확인'}></Button>
       <div className='preview'>
-        <TitleText text={'동영상 미리보기'}></TitleText>
+        <TitleText text={'동영상 미리보기'} marginTop={5} marginBottom={5}></TitleText>
         <PrivewVideo>
           <div className='videoBox'>
             <iframe src="https://www.youtube.com/embed/6ZUIwj3FgUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

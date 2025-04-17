@@ -4,13 +4,14 @@ import styled from 'styled-components';
 
 let Title = styled.h2`
   font-size: 4vh;
-  margin:10% 0;
   white-space: pre-line;
+  margin-top:${(props) => props.marginTop + "%"};
+  margin-bottom:${(props) => props.marginBottom + "%"};
 `
 
-const TitleText = ({text}) => {
+const TitleText = ({text, marginTop, marginBottom}) => {
   return (
-    <Title>{text}</Title>
+    <Title marginTop={marginTop} marginBottom={marginBottom}>{text}</Title>
   )
 }
 

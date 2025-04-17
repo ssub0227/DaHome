@@ -6,6 +6,10 @@ import SubTitleText from 'components/SubTitleText';
 
 let HomeBox = styled.div`
   text-align: center;
+  
+  > div{
+    margin:5% 0;
+  }
 `
 
 const Home = () => {
