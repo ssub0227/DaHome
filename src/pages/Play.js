@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TitleText from 'components/TitleText';
 import styled from 'styled-components';
 import Button from 'components/Button';
+import VideoPreview from 'components/VideoPreview';
+
 
 let HumanList = styled.ul`
   display:grid;
@@ -25,11 +27,14 @@ let HumanItem = styled.li`
 
 
 const Play = () => {
+  const [videoId, setVideoId] = useState('abcd1234xyz'); // 예시 ID
+  const [isVideo, setIsVideo] = useState(true); // 필요에 따라 상태 관리
+
   return (
     <div>
       <TitleText text={'독서모임 운동 프로젝트'} marginBottom={5}></TitleText>
       <div>
-        {/* <iframe></iframe> */}
+        <VideoPreview isVideo={isVideo} videoId={videoId} />
       </div>
       <HumanList>
         <HumanItem>
