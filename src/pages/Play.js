@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
-import TitleText from 'components/TitleText';
+import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+
+import TitleText from 'components/TitleText';
 import Button from 'components/Button';
 import VideoPreview from 'components/VideoPreview';
 
@@ -9,6 +11,7 @@ let HumanList = styled.ul`
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   gap:5px 5px;
+  margin-top:2vh;
 `
 
 let HumanItem = styled.li`
@@ -27,12 +30,13 @@ let HumanItem = styled.li`
 
 
 const Play = () => {
-  const [videoId, setVideoId] = useState('abcd1234xyz'); // 예시 ID
-  const [isVideo, setIsVideo] = useState(true); // 필요에 따라 상태 관리
+  const title = useSelector((state) => state.project.title);
+  const videoId = useSelector((state) => state.project.videoId);
+  const isVideo = useSelector((state) => state.project.isVideo);
 
   return (
     <div>
-      <TitleText text={'독서모임 운동 프로젝트'} marginBottom={5}></TitleText>
+      <TitleText text={title} marginBottom={5}></TitleText>
       <div>
         <VideoPreview isVideo={isVideo} videoId={videoId} />
       </div>

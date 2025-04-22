@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import {React, useState } from 'react';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { setTitle, setVideoId } from 'store/projectSlice';
+import { useNavigate } from 'react-router-dom';
+
 import Button from 'components/Button';
 import TitleText from 'components/TitleText';
 import VideoPreview from 'components/VideoPreview';
@@ -15,52 +19,45 @@ let Input = styled.input`
   }
 `
 
-let PreviewVideo = styled.div`
-  text-align: center;
-  position: relative;
-  padding-top: 56%;
-  width: 100%;
-  height: 0;
-  border-radius: 8px;
-  border:2px dashed var(--brown);
-  overflow: hidden;
-  background-color: var(--white);
-
-  iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-`
-
-
 const Upload = () => {
-  const [roomTitle, setRoomTitle] = useState('');
-  const [videoId, setVideoId] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+    
+  const [localTitle, setLocalTitle] = useState('');
+  const [localVideoUrl, setLocalVideoUrl] = useState('');
+  const [videoId, setVideoIdState] = useState('');
   const [isVideo, setIsVideo] = useState(null);
-  
+
 
   // 비디오 링크 입력 유효성 검사
-  const handleVideo = (event) =>{
-    const input = event.target.value;
+  const handleVideo = (e) =>{
+    const input = e.target.value;
+    setLocalVideoUrl(input);
+
     const match = input.match(/(?:youtube\.com\/.*v=|youtu\.be\/)([^"&?\/\s]{11})/);
     const id = match ? match[1] : '';
-    setVideoId(id);
+    setVideoIdState(id);
     setIsVideo(id ? true : false);
+  }
+
+  const handleCreateProject = () => {
+    if (isVideo){
+      dispatch(setTitle(localTitle));
+      dispatch(setVideoId(videoId));
+      navigate('/share');
+    } else {
+      alert("유효하지 않은 유튜브 링크입니다.");
+    }
   }
 
   return (  
     <div>
       <TitleText text={'다홈 프로젝트 생성'} marginBottom={5}></TitleText>
-      <Input type='text' placeholder='프로젝트 이름을 입력하세요.' id='pj_title_input' value={roomTitle} onChange={(event)=>setRoomTitle(event.target.value)}></Input>
-      <Input type='text' placeholder='유튜르 링크를 입력하세요.' id='vd_link_input' onChange={handleVideo}></Input>
+      <Input type='text' placeholder='프로젝트 이름을 입력하세요.' id='pj_title_input' value={localTitle} onChange={(e)=>setLocalTitle(e.target.value)}></Input>
+      <Input type='text' placeholder='유튜르 링크를 입력하세요.' id='vd_link_input' value={localVideoUrl} onChange={handleVideo}></Input>
       <TitleText text={'동영상 미리보기'} marginTop={5} marginBottom={5}></TitleText>
-      <PreviewVideo>
-        <VideoPreview isVideo={isVideo} videoId={videoId} />
-      </PreviewVideo>
-      <Button link={'/share'} text={'운동 프로젝트 생성'}></Button>
+      <VideoPreview isVideo={isVideo} videoId={videoId} />
+      <Button text={'운동 프로젝트 생성'} onClick={handleCreateProject} disabledLink></Button>
     </div>
   )
 }

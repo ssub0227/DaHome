@@ -2,13 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Button = ({link, text}) => {
-
-  return (
-    <Btn to={link}>{text}</Btn>
-  )
-}
-
 let Btn = styled(Link)`
   background-color: var(--brown);
   color: white;
@@ -20,4 +13,16 @@ let Btn = styled(Link)`
   font-size: 2.5vh;
   text-align: center;
 `
+
+const Button = ({link, text, disabledLink, onClick }) => {
+  if(disabledLink){
+    return (
+      <Btn as='button' onClick={onClick}>{text}</Btn>
+    )
+  } else {
+    return (
+      <Btn to={link} onClick={onClick}>{text}</Btn>
+    )
+  }
+}
 export default Button;
