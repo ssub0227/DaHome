@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const CommonCSS = createGlobalStyle`
-
   :root{
     --brown:#472d30;
     --pinkbrown:#723d46;
