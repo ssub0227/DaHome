@@ -17,8 +17,8 @@ let BtnList = styled.ul`
 const Share = () => {
   return (
     <div className='share'>
-      <TitleText text={'프로젝트 완성!'}></TitleText>
-      <SubTitleText text={'우리 다 같이 운동하는 거야...!'}></SubTitleText>
+      <TitleText text={'프로젝트 완성!'} marginBottom={5}></TitleText>
+      <SubTitleText text={'친구에게 공유하고 함께 운동해요!'}></SubTitleText>
       <BtnList className='btnList'>
         <li>
           <Button text={'공유하기'}></Button>

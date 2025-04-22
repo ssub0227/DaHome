@@ -2,15 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-let Title = styled.p`
-  margin-top: 1.5vh;
-  font-size:2vh;
+let Subitle = styled.p`
+  font-size:3vh;
   white-space: pre-line;
 `
 
 const SubTitleText = ({text}) => {
   return (
-    <Title>{text}</Title>
+    <Subitle>{text}</Subitle>
   )
 }
 

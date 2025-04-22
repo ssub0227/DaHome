@@ -1,7 +1,7 @@
 import {React, useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { setTitle, setVideoId } from 'store/projectSlice';
+import { setTitle, setVideoId, setIsVideo } from 'store/projectSlice';
 import { useNavigate } from 'react-router-dom';
 
 import Button from 'components/Button';
@@ -26,7 +26,7 @@ const Upload = () => {
   const [localTitle, setLocalTitle] = useState('');
   const [localVideoUrl, setLocalVideoUrl] = useState('');
   const [videoId, setVideoIdState] = useState('');
-  const [isVideo, setIsVideo] = useState(null);
+  const [isVideo, setIsVideoState] = useState(null);
 
 
   // 비디오 링크 입력 유효성 검사
@@ -37,13 +37,14 @@ const Upload = () => {
     const match = input.match(/(?:youtube\.com\/.*v=|youtu\.be\/)([^"&?\/\s]{11})/);
     const id = match ? match[1] : '';
     setVideoIdState(id);
-    setIsVideo(id ? true : false);
+    setIsVideoState(id ? true : false);
   }
 
   const handleCreateProject = () => {
     if (isVideo){
       dispatch(setTitle(localTitle));
       dispatch(setVideoId(videoId));
+      dispatch(setIsVideo(isVideo));
       navigate('/share');
     } else {
       alert("유효하지 않은 유튜브 링크입니다.");

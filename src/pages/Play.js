@@ -6,7 +6,6 @@ import TitleText from 'components/TitleText';
 import Button from 'components/Button';
 import VideoPreview from 'components/VideoPreview';
 
-
 let HumanList = styled.ul`
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -30,9 +29,7 @@ let HumanItem = styled.li`
 
 
 const Play = () => {
-  const title = useSelector((state) => state.project.title);
-  const videoId = useSelector((state) => state.project.videoId);
-  const isVideo = useSelector((state) => state.project.isVideo);
+  const {title,videoId,isVideo}  = useSelector((state) => state.project);
 
   return (
     <div>
