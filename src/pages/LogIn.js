@@ -1,9 +1,10 @@
 import React from 'react';
+import TitleText from 'components/TitleText';
 
 const Login = () => {
   return (
     <div>
-      로그인페이지
+      <TitleText text={'다 같이 홈트레이닝, 다홈 £'} />
     </div>
   )
 }

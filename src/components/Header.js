@@ -30,25 +30,24 @@ let HeaderText = styled.h1`
   font-size:5vh;
 `
 
-// let HeaderIcon = styled.a`
-//   margin-right:10px;
-//   font-size: 3vh;
-// `
 
 const Header = () =>{
+  const isLogin = false;
+
   return (
     <HeaderBox>
       <ul>
         <li>
           <HeaderText>
             <Link to='/'>
-              {/* <HeaderIcon className='fa-solid fa-house-user'></HeaderIcon> */}
-              다홈
+              다홈 £
             </Link>
           </HeaderText>
         </li>
         <li>
-          <Link to={'/login'}>로그인</Link>
+          {
+            isLogin ? <Link to={'/MyPage'}>마이페이지</Link> : <Link to={'/login'}>로그인</Link>
+          }
         </li>
       </ul>
     </HeaderBox>

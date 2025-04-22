@@ -15,7 +15,7 @@ let Input = styled.input`
   }
 `
 
-let PrivewVideo = styled.div`
+let PreviewVideo = styled.div`
   text-align: center;
   position: relative;
   padding-top: 56%;
@@ -56,10 +56,10 @@ const Upload = () => {
       <TitleText text={'다홈 프로젝트 생성'} marginBottom={5}></TitleText>
       <Input type='text' placeholder='프로젝트 이름을 입력하세요.' id='pj_title_input' value={roomTitle} onChange={(event)=>setRoomTitle(event.target.value)}></Input>
       <Input type='text' placeholder='유튜르 링크를 입력하세요.' id='vd_link_input' onChange={handleVideo}></Input>
-      <div className='preview'>
-        <TitleText text={'동영상 미리보기'} marginTop={5} marginBottom={5}></TitleText>
+      <TitleText text={'동영상 미리보기'} marginTop={5} marginBottom={5}></TitleText>
+      <PreviewVideo>
         <VideoPreview isVideo={isVideo} videoId={videoId} />
-      </div>
+      </PreviewVideo>
       <Button link={'/share'} text={'운동 프로젝트 생성'}></Button>
     </div>
   )

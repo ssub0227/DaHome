@@ -12,13 +12,16 @@ let HomeBox = styled.div`
   }
 `
 
+let TitleImpact= styled.p`
+  font-size: 5vh;
+`
+
 const Home = () => {
   return (
     <HomeBox> 
       <div>
-        <TitleText text={'다 같이 홈트레이닝 프로젝트'}>
-          <p className='titleImpact'>다홈</p>
-        </TitleText>
+        <TitleText text={'다 같이 홈트레이닝'}/>
+        <TitleImpact>다홈 £</TitleImpact>
         <SubTitleText text={'원하는 홈트레이닝 영상을 등록하고\n친구화 함께 운동해요.'}></SubTitleText>
         <Button link={'/upload'} text={'시작하기'}></Button>
       </div>

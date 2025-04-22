@@ -10,9 +10,9 @@ const VideoPreview = ({ isVideo, videoId }) => {
     transform: translate(-50%, -50%);
   `
 
-  if (isVideo === true && videoId) {
+  if (isVideo === true) {
     return <YouTube videoId={videoId} opts={{ width: '100%', height: '360' }} />;
-  } else if (isVideo === false) {
+  } else {
     return <PreviewText>유효하지 않은 유튜브 링크입니다.</PreviewText>;
   }
 }

@@ -35,19 +35,6 @@ const CommonCSS = createGlobalStyle`
     border-radius: 30px;
     box-shadow: 1px 1px 10px 1px var(--light-green-shadow);
   }
-
-  .titleImpact{
-    font-size: 5vh;
-  }
-
-  .displayNo{
-    display: none;
-  }
-
-  .displayYes{
-    display: block;
-  }
-
 `
 
 export default CommonCSS;
